@@ -33,4 +33,4 @@ ViewPager + Fragment异步实时刷新
 
 ## 备注
 
-最后，运行该项目需要引用[ViewPagerIndicator](https://github.com/JakeWharton/Android-ViewPagerIndicator)的library包。
+最后，运行该项目需要引用[ViewPagerIndicator](https://github.com/JakeWharton/Android-ViewPagerIndicator)的library包, 不过我已经放在了extra文件夹下了。
