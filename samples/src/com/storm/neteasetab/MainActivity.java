@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.SimpleOnPageChangeListener;
-import android.util.Log;
 
 import com.viewpagerindicator.TabPageIndicator;
 
@@ -34,6 +33,7 @@ public class MainActivity extends FragmentActivity {
 		mIndicator = (TabPageIndicator) findViewById(R.id.indicator);
 		mViewPager = (ViewPager) findViewById(R.id.vp_content);
 		mViewPager.setAdapter(mAdapter);
+		mIndicator.setViewPager(mViewPager);
 		mIndicator.setOnPageChangeListener(pageChangeListener);
 
 		// 默认让第一个Fragment也刷新
@@ -43,7 +43,6 @@ public class MainActivity extends FragmentActivity {
 	SimpleOnPageChangeListener pageChangeListener = new SimpleOnPageChangeListener() {
 		@Override
 		public void onPageSelected(int arg0) {
-			Log.e("MainActivity", arg0 + "");
 			mAdapter.getItem(arg0).onRefresh();
 		}
 	};
